@@ -1,0 +1,36 @@
+// _baseline.scss - Baseline global styling
+@use './variables/colours' as *;
+@use './variables/breakpoints' as *;
+@use './variables/typography' as *;
+@use './mixins/_global.mixins' as *;
+
+html {
+}
+
+body,
+main {
+    @include zero;
+    background-color: $colour-grey-one;
+    min-height: 100vh;
+    font-family: $font-stack;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    @include zero;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15px 0;
+
+    @media screen and (min-width: $bp-large) {
+        padding: 30px 0 0;
+    }
+}

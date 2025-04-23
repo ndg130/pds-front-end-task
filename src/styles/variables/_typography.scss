@@ -1,0 +1,29 @@
+// _typography.scss - Typography variables
+
+// Font sizes and line heights
+// Mobile sizes
+$font-primary-size: 26px;
+$font-primary-line: 1.25rem;
+
+$font-secondary-size: 20px;
+$font-secondary-line: 1.35rem;
+
+$font-tertiary-size: 18px;
+$font-tertiary-line: 1.5rem;
+
+// Large sizes
+$font-primary-size-lg: 30px;
+$font-primary-line-lg: 1.25rem;
+
+$font-secondary-size-lg: 22px;
+$font-secondary-line-lg: 1.35rem;
+
+$font-tertiary-size-lg: 18px;
+$font-tertiary-line-lg: 1.5rem;
+
+// Font families
+$font-stack: "Verdana", Arial, sans-serif;
+
+// Font weights
+$font-weight-regular: 400;
+$font-weight-bold: 700;

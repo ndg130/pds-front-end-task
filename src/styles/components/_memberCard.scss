@@ -1,0 +1,108 @@
+@use '../variables/colours' as *;
+@use '../variables/breakpoints' as *;
+@use '../variables/typography' as *;
+@use '../mixins/_global.mixins' as *;
+
+.card-member {
+    background-color: $colour-background;
+    width: 100%;
+
+    @media screen and (min-width: $bp-large) {
+        width: 450px;
+    }
+    .card-inner {
+        display: flex;
+        flex-direction: row;
+        padding: 15px 15px 0 15px;
+        border-top: 5px solid $colour-brand;
+    
+        @media screen and (min-width: $bp-large) {
+            flex-direction: column;
+            padding: 20px 20px 0 20px;
+            border-left: 5px solid $colour-brand;
+            border-top: none;
+
+        }
+
+        .content-image {
+            padding-right: 20px;
+
+            @media screen and (min-width: $bp-large) {
+                padding-right: 0;
+            }
+
+            img {
+                height: 60px;
+                width: 60px;
+                border-radius: 100%;
+                border: solid 3px;
+                object-fit: cover;
+
+                @media screen and (min-width: $bp-large) {
+                    height: 100px;
+                    width: 100px;
+                    border: solid 5px;
+                }
+            }
+        }
+        .content-info {
+            .info-primary {
+                font-weight: $font-weight-bold;
+                color: $colour-brand;
+                font-size: $font-primary-size;
+                line-height: $font-primary-line;
+                padding-bottom: 15px;
+                @media screen and (min-width: $bp-large) {
+                    font-size: $font-primary-size-lg;
+                    line-height: $font-primary-line-lg;
+                    padding-bottom: 20px;
+                }
+            }
+            .info-secondary {
+                font-weight: $font-weight-regular;
+                color: $colour-grey-two;
+                font-size: $font-secondary-size;
+                line-height: $font-secondary-line;
+                padding-bottom: 5px;
+                @media screen and (min-width: $bp-large) {
+                    font-size: $font-secondary-size;
+                    line-height: $font-secondary-line;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                }
+            }
+            .info-tertiary {
+                font-weight: $font-weight-regular;
+                color: $colour-grey-two;
+                font-size: $font-tertiary-size;
+                line-height: $font-tertiary-line;
+                padding-bottom: 20px;
+                @media screen and (min-width: $bp-large) {
+                    font-size: $font-tertiary-size;
+                    line-height: $font-tertiary-line;
+                }
+            }
+            .info-additional {
+                background-color: $colour-grey-one;
+                border-radius: 10px;
+                padding: 10px 15px;
+                margin-bottom: 10px;
+                @media screen and (min-width: $bp-large) {
+                    padding: 15px;
+                    margin-bottom: 15px;
+                }
+                p {
+                    font-weight: $font-weight-bold;
+                    color: $colour-alert;
+                    font-size: $font-tertiary-size;
+                    line-height: $font-tertiary-line;      
+                    @media screen and (min-width: $bp-large) {
+                        font-size: $font-tertiary-size;
+                        line-height: $font-tertiary-line;
+                    }              
+                }
+
+            }
+        }
+    }
+}
