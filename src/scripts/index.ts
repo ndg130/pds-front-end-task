@@ -224,6 +224,18 @@ class Main {
         } 
     }
 
+
+    /**
+     * Hides the error display by adding the 'hidden' class and clearing its text content.
+     * @param {Element} element - The element to hide.
+     */
+    private hideErrorDisplay = (element: Element) => {
+        if (element) {
+            element.classList.add('hidden');
+            element.textContent = "";
+        }
+    };
+
     /**
      * Hides or shows the 'Get started' message in the UI
      * @param {boolean} value - True to show the message, false to hide it
@@ -234,25 +246,12 @@ class Main {
         const errorDisplay = document.querySelector('.error-message');
         const getStartedDisplay = document.querySelector('.get-started');
 
-        // hide the instructions if value is false
-        if(!value){
-            // hide the get started message
-            getStartedDisplay.classList.add('hidden');
-            // remove previous errors
-            if(errorDisplay){
-                errorDisplay.classList.add('hidden');
-                errorDisplay.textContent = "";
-            }
-        }
-        // show the instructions if value is true
-        if(value){
-            // show the get started message
-            getStartedDisplay.classList.remove('hidden');
-            // remove previous errors
-            if(errorDisplay){
-                errorDisplay.classList.add('hidden');
-                errorDisplay.textContent = "";
-            }
+        if (!value) {
+            getStartedDisplay?.classList.add('hidden');
+            this.hideErrorDisplay(errorDisplay);
+        } else {
+            getStartedDisplay?.classList.remove('hidden');
+            this.hideErrorDisplay(errorDisplay);
         }
     }
 

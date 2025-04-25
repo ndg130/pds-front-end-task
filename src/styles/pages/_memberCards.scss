@@ -5,25 +5,25 @@
 
 .card-display {
     
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 40px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    row-gap: 40px; 
     
 
-    .ui-messages {
-        display: block;
-        max-width: 600px;
-        font-size: $font-primary-size;
-        @media screen and (min-width: $bp-large) {
-            padding: 0 15px;  
-        }
-        p {
-            &.hidden {
-                display: none;
-            }
-        }
-        
+    .ui-messages { 
+        display: block; 
+        max-width: 600px; 
+        font-size: $font-primary-size; 
+        @media screen and (min-width: $bp-large) { 
+            padding: 0 15px;   
+        } 
+        p { 
+            &.hidden { 
+                display: none; 
+            } 
+        } 
+         
     }
 
 }

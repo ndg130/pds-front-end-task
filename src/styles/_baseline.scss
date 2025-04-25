@@ -4,9 +4,6 @@
 @use './variables/typography' as *;
 @use './mixins/_global.mixins' as *;
 
-html {
-}
-
 body,
 main {
     @include zero;
