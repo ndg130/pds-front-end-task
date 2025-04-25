@@ -64,7 +64,7 @@ class Main {
             this.displayUiInstructions(false);
             const id = this.readMemberId();
             const memberDetails = await this.fetchMemberDetails(id);
-            console.log(memberDetails)
+            // console.log(memberDetails)
             this.renderMemberCard(memberDetails);
         } catch (error) {
             this.displayError(error instanceof Error ? error.message : 'Unknown error occurred');
